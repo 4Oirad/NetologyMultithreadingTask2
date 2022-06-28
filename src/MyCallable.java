@@ -11,17 +11,12 @@ public class MyCallable extends Thread implements Callable<Integer> {
                 System.out.println("Всем привет! Я " + Thread.currentThread().getName());
                 n++;
             }
-//            while(!isInterrupted()) {
-//                Thread.sleep(2500);
-//                System.out.println("Всем привет! Я " + Thread.currentThread().getName());
-//                n++;
-//            }
         } catch (InterruptedException err) {
 
         } finally{
             System.out.printf("%s завершен\n", Thread.currentThread().getName());
+            n++;
         }
-
         return n;
     }
 }
